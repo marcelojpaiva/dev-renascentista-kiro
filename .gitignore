@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs / temporários
+*.log
+.cache/
+node_modules/
+
+# Apresentação base (não publicar o deck completo no repo público).
+# Remova esta linha se quiser versionar o .pptx.
+docs/base.pptx

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#e8c97a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#c99a3b" stop-opacity="0.15"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8c97a"/>
+      <stop offset="100%" stop-color="#c99a3b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- círculo e quadrado vitruvianos -->
+  <circle cx="200" cy="205" r="150" stroke="url(#line)" stroke-width="1.4" opacity="0.75"/>
+  <rect x="62" y="118" width="276" height="276" stroke="url(#line)" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- aura -->
+  <circle cx="200" cy="190" r="120" fill="url(#glow)" opacity="0.25"/>
+
+  <!-- figura: cabeça -->
+  <circle cx="200" cy="92" r="26" stroke="url(#line)" stroke-width="2"/>
+
+  <!-- tronco -->
+  <path d="M200 118 L200 250" stroke="url(#line)" stroke-width="2"/>
+
+  <!-- braços (duas posições, como no desenho original) -->
+  <path d="M200 150 L92 120 M200 150 L308 120" stroke="url(#line)" stroke-width="2" opacity="0.9"/>
+  <path d="M200 155 L96 180 M200 155 L304 180" stroke="url(#line)" stroke-width="2" opacity="0.6"/>
+
+  <!-- pernas (duas posições) -->
+  <path d="M200 250 L150 360 M200 250 L250 360" stroke="url(#line)" stroke-width="2" opacity="0.9"/>
+  <path d="M200 250 L120 330 M200 250 L280 330" stroke="url(#line)" stroke-width="2" opacity="0.55"/>
+
+  <!-- "circuitos": nós tecnológicos sobre a figura -->
+  <g fill="#e8c97a">
+    <circle cx="200" cy="150" r="4"/>
+    <circle cx="92" cy="120" r="3"/>
+    <circle cx="308" cy="120" r="3"/>
+    <circle cx="150" cy="360" r="3"/>
+    <circle cx="250" cy="360" r="3"/>
+    <circle cx="200" cy="250" r="4"/>
+  </g>
+  <g stroke="#8c4fff" stroke-width="1" opacity="0.7">
+    <path d="M200 150 L240 170 L240 210"/>
+    <path d="M200 150 L160 170 L160 210"/>
+    <path d="M200 250 L200 290"/>
+  </g>
+  <g fill="#8c4fff">
+    <circle cx="240" cy="210" r="2.5"/>
+    <circle cx="160" cy="210" r="2.5"/>
+    <circle cx="200" cy="290" r="2.5"/>
+  </g>
+</svg>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Desenvolvedor Renascentista: KIRO - Muito Além do Prompt. Keynote de abertura do AWS Community Day Salvador por Marcelo Paiva." />
+  <title>Desenvolvedor Renascentista · KIRO — Muito Além do Prompt</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__brand">
+      <span class="nav__brand-mark">R</span>
+      <span>Dev Renascentista</span>
+    </a>
+    <nav class="nav__links" aria-label="Navegação principal">
+      <a href="#ato1">Renascimento</a>
+      <a href="#pilares">Pilares</a>
+      <a href="#prompt">Além do Prompt</a>
+      <a href="#kiro">Kiro</a>
+      <a href="#consequencias">Responsabilidade</a>
+      <a href="#brinde" class="nav__cta">Brinde</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="hero__art" aria-hidden="true">
+      <!-- Homem Vitruviano estilizado em SVG (ver js/vitruvian.svg via css background) -->
+      <div class="vitruvian"></div>
+    </div>
+    <div class="hero__content">
+      <p class="kicker">AWS Community Day · Salvador · Keynote de abertura</p>
+      <h1 class="hero__title">
+        <span>Desenvolvedor</span>
+        <span class="gold">Renascentista</span>
+      </h1>
+      <div class="divider"></div>
+      <p class="hero__subtitle">KIRO — Muito Além do Prompt</p>
+      <p class="hero__author">
+        <strong>Marcelo Paiva</strong><br />
+        Developer · CTO na Softprime Soluções · @marcelojpaiva
+      </p>
+      <a href="#ato1" class="btn btn--gold">Começar a jornada ↓</a>
+    </div>
+  </section>
+
+  <!-- ===================== PROVOCAÇÃO ===================== -->
+  <section class="quote-section" id="provocacao">
+    <div class="container">
+      <p class="big-quote">
+        “A IA não vai te substituir.<br />
+        <span class="gold">Quem souber trabalhar com ela, sim.”</span>
+      </p>
+      <p class="quote-sub">
+        A pergunta deixou de ser SE vamos usar IA. É COMO vamos usá-la — e com qual responsabilidade.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== ATO 1 — RENASCIMENTO ===================== -->
+  <section class="act" id="ato1">
+    <div class="container">
+      <p class="act__label">Ato 01</p>
+      <h2 class="act__title">O Renascimento e a era da IA</h2>
+      <p class="act__lead">Século XV × Século XXI: por que a história está se repetindo.</p>
+
+      <h3 class="section-h">A história não se repete. Ela rima.</h3>
+      <div class="parallel">
+        <div class="parallel__col parallel__col--old">
+          <h4>Renascimento (séc. XV–XVI)</h4>
+          <ul>
+            <li>A imprensa de Gutenberg democratiza o saber</li>
+            <li>O humanista: arte + ciência + técnica</li>
+            <li>Da Vinci: curiosidade sem fronteiras</li>
+            <li>Mecenas financiam a inovação</li>
+          </ul>
+        </div>
+        <div class="parallel__arrow" aria-hidden="true">→</div>
+        <div class="parallel__col parallel__col--new">
+          <h4>Era da IA (hoje)</h4>
+          <ul>
+            <li>A IA generativa democratiza a criação</li>
+            <li>O profissional multidisciplinar + IA</li>
+            <li>Quem cruza áreas vira protagonista</li>
+            <li>Nuvem e comunidades viabilizam qualquer um</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ATO 2 — OS 5 PILARES ===================== -->
+  <section class="act act--alt" id="pilares">
+    <div class="container">
+      <p class="act__label">Ato 02</p>
+      <h2 class="act__title">Os 5 pilares do Desenvolvedor Renascentista</h2>
+      <p class="act__lead">A nova multidisciplinaridade.</p>
+
+      <div class="pillars" id="pillarsGrid">
+        <!-- Os cartões são injetados por js/main.js (data em js/content.js) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ATO 3 — ALÉM DO PROMPT ===================== -->
+  <section class="act" id="prompt">
+    <div class="container">
+      <p class="act__label">Ato 03</p>
+      <h2 class="act__title">Muito além do prompt</h2>
+      <p class="act__lead">Pedir para a IA fazer é fácil. Fazer certo é outra história.</p>
+
+      <h3 class="section-h">O salto: do “me faz um código” ao sistema confiável</h3>
+      <div class="compare">
+        <div class="compare__col compare__col--bad">
+          <h4>Só prompt</h4>
+          <ul>
+            <li>Resposta imediata, mas sem contexto do seu projeto</li>
+            <li>Esquece regras, padrões e decisões anteriores</li>
+            <li>Você revisa tudo na mão, toda vez</li>
+            <li>Ótimo para rascunho — arriscado em produção</li>
+          </ul>
+        </div>
+        <div class="compare__col compare__col--good">
+          <h4>Além do prompt</h4>
+          <ul>
+            <li>Contexto: specs, regras e padrões do projeto</li>
+            <li>Agentes que planejam, executam e verificam</li>
+            <li>Automação com hooks e revisão contínua</li>
+            <li>Você dirige a intenção; a IA sustenta a execução</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="section-h">A ponte: do pilar à ferramenta</h3>
+      <p class="section-sub">Cada pilar vira prática com o Kiro.</p>
+      <ul class="bridge" id="bridgeList">
+        <!-- injetado por js/main.js -->
+      </ul>
+      <p class="bridge__close">Os pilares não são teoria: viram fluxo de trabalho. E a ferramenta disso é o Kiro.</p>
+    </div>
+  </section>
+
+  <!-- ===================== ATO 4 — KIRO ===================== -->
+  <section class="act act--kiro" id="kiro">
+    <div class="container">
+      <p class="act__label act__label--purple">Ato 04</p>
+      <h2 class="act__title">Kiro: o potencializador</h2>
+      <p class="act__lead">Não só escreve código — trabalha do jeito que você pensa.</p>
+
+      <h3 class="section-h">Um ambiente de desenvolvimento guiado por agentes</h3>
+      <div class="features" id="featuresGrid">
+        <!-- injetado por js/main.js -->
+      </div>
+
+      <h3 class="section-h">Para muito além do dev</h3>
+      <p class="section-sub">Potencializa todo perfil — não só quem programa.</p>
+      <div class="profiles" id="profilesGrid">
+        <!-- injetado por js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ATO 5 — CONSEQUÊNCIAS ===================== -->
+  <section class="act act--alt" id="consequencias">
+    <div class="container">
+      <p class="act__label">Ato 05</p>
+      <h2 class="act__title">Consequências, responsabilidade e desafios</h2>
+      <p class="act__lead">O lado que o hype não mostra — e que a gente precisa encarar.</p>
+
+      <h3 class="section-h">Quando a IA vira piloto automático: o início do caos</h3>
+      <div class="risks" id="risksGrid">
+        <!-- injetado por js/main.js -->
+      </div>
+
+      <h3 class="section-h">A resposta renascentista</h3>
+      <p class="section-sub">Humano no comando, IA na potência.</p>
+      <div class="answers" id="answersGrid">
+        <!-- injetado por js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ATO 6 — PRÓXIMOS PASSOS ===================== -->
+  <section class="act" id="proximos">
+    <div class="container">
+      <p class="act__label act__label--orange">Ato 06</p>
+      <h2 class="act__title">Seus próximos passos</h2>
+      <p class="act__lead">Onde continuar a jornada — e um presente para você.</p>
+
+      <div class="builder">
+        <div class="builder__text">
+          <h3 class="section-h">AWS Builder Center</h3>
+          <ul>
+            <li>O ponto de encontro de quem constrói na AWS</li>
+            <li>Aprendizado, documentação e trilhas em um só lugar</li>
+            <li>Comunidade global, conteúdo e construção na prática</li>
+            <li>De iniciante a especialista — no seu ritmo</li>
+          </ul>
+          <a href="https://builder.aws.com/" target="_blank" rel="noopener" class="btn btn--orange">builder.aws.com →</a>
+        </div>
+        <div class="builder__badge" aria-hidden="true">AWS<br />Builder<br />Center</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BRINDE ===================== -->
+  <section class="gift" id="brinde">
+    <div class="container gift__inner">
+      <div class="gift__text">
+        <p class="kicker gold">🎁 Presente para quem está aqui</p>
+        <h2 class="gift__title">500 créditos para testar o Kiro</h2>
+        <div class="divider"></div>
+        <p>Saia daqui e coloque em prática tudo o que vimos. Aponte a câmera no QR Code e resgate os seus créditos — é por tempo limitado.</p>
+        <a href="https://s12d.com/kiroemsalvador" target="_blank" rel="noopener" class="btn btn--gold">s12d.com/kiroemsalvador</a>
+      </div>
+      <div class="gift__qr">
+        <!-- QR gerado dinamicamente para o link do brinde -->
+        <img id="giftQr" alt="QR Code para resgatar 500 créditos do Kiro em s12d.com/kiroemsalvador" width="220" height="220" />
+        <p class="gift__qr-cap">s12d.com/kiroemsalvador</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FECHAMENTO ===================== -->
+  <section class="closing" id="fechamento">
+    <div class="container">
+      <p class="closing__quote">
+        O Renascimento não foi sobre ferramentas novas.<br />
+        Foi sobre pessoas que ousaram pensar diferente.<br />
+        <span class="gold">Com a IA, a vez de renascer é sua.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="obrigado">
+    <div class="container footer__inner">
+      <div>
+        <h2 class="footer__thanks">Obrigado, Salvador!</h2>
+        <p class="footer__author">
+          <strong>Marcelo Paiva</strong><br />
+          Developer · CTO na Softprime Soluções<br />
+          <a href="https://github.com/marcelojpaiva" target="_blank" rel="noopener">@marcelojpaiva</a>
+        </p>
+      </div>
+      <div class="footer__links">
+        <a href="https://s12d.com/kiroemsalvador" target="_blank" rel="noopener">🎁 Resgate seu brinde</a>
+        <a href="https://builder.aws.com/" target="_blank" rel="noopener">🛠️ AWS Builder Center</a>
+      </div>
+    </div>
+    <p class="footer__note">Desenvolvedor Renascentista · KIRO · AWS Community Day Salvador</p>
+  </footer>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
