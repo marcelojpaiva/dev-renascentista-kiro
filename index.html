@@ -25,6 +25,7 @@
       <a href="#prompt">Além do Prompt</a>
       <a href="#kiro">Kiro</a>
       <a href="#consequencias">Responsabilidade</a>
+      <a href="#sobre">Sobre</a>
       <a href="#brinde" class="nav__cta">Brinde</a>
     </nav>
     <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
@@ -227,6 +228,46 @@
         <!-- QR gerado dinamicamente para o link do brinde -->
         <img id="giftQr" alt="QR Code para resgatar 500 créditos do Kiro em s12d.com/kiroemsalvador" width="220" height="220" />
         <p class="gift__qr-cap">s12d.com/kiroemsalvador</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE O PALESTRANTE ===================== -->
+  <section class="act about" id="sobre">
+    <div class="container">
+      <p class="act__label">Sobre o palestrante</p>
+      <h2 class="act__title">Quem está no palco</h2>
+
+      <div class="about__card">
+        <div class="about__photo">
+          <!-- Enquanto a foto real (assets/marcelo.jpg) não existe, o
+               placeholder com as iniciais "MP" mantém o layout. Ao adicionar
+               a imagem, ela aparece automaticamente sobre o placeholder. -->
+          <span class="about__initials" aria-hidden="true">MP</span>
+          <img
+            class="about__img"
+            src="assets/marcelo.jpg"
+            alt="Marcelo Paiva, palestrante"
+            width="180" height="180"
+            onerror="this.style.display='none'"
+          />
+        </div>
+        <div class="about__info">
+          <h3 class="about__name">Marcelo Paiva</h3>
+          <p class="about__role">Developer · CTO na Softprime Soluções</p>
+          <p class="about__bio">
+            Apaixonado por unir curiosidade, técnica e visão de dono, no espírito
+            renascentista que inspira esta keynote.
+          </p>
+          <a
+            href="https://instagram.com/marcelojpaiva"
+            target="_blank"
+            rel="noopener"
+            class="btn btn--gold about__social"
+          >
+            @marcelojpaiva no Instagram ↗
+          </a>
+        </div>
       </div>
     </div>
   </section>

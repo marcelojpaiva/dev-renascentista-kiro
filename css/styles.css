@@ -215,6 +215,34 @@ ul { list-style: none; }
 .answer__name { font-family: var(--font-h); font-weight: 700; font-size: 1.25rem; }
 .answer__desc { color: #6a5f49; font-size: .92rem; }
 
+/* ---------- 15b. SOBRE O PALESTRANTE ---------- */
+.about__card {
+  display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center;
+  margin-top: 28px;
+  background: var(--white); border-radius: var(--radius); padding: 36px;
+  box-shadow: var(--shadow); border-top: 5px solid var(--gold);
+}
+.about__photo {
+  position: relative; width: 180px; height: 180px; flex: none;
+  border-radius: 50%; overflow: hidden;
+  border: 4px solid var(--gold);
+  box-shadow: 0 0 0 6px rgba(201,154,59,.15);
+  background: linear-gradient(135deg, var(--deep) 0%, var(--deep-2) 100%);
+  display: grid; place-items: center;
+}
+.about__initials {
+  font-family: var(--font-h); font-weight: 700; font-size: 3.4rem;
+  color: var(--gold-light); letter-spacing: .04em;
+}
+.about__img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.about__name { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.4rem); }
+.about__role { color: var(--terra); font-weight: 600; margin: 2px 0 14px; }
+.about__bio { color: #55503f; max-width: 540px; margin-bottom: 22px; }
+.about__social { font-size: .95rem; }
+
 /* ---------- 16. BUILDER CENTER (Ato 6) ---------- */
 .builder { display: grid; grid-template-columns: 1.4fr 1fr; gap: 30px; align-items: center; margin-top: 20px; }
 .builder__text ul { margin: 16px 0 24px; }
@@ -267,6 +295,9 @@ ul { list-style: none; }
   .pillars, .profiles { grid-template-columns: 1fr 1fr; }
   .features, .compare, .risks, .answers, .builder, .gift__inner { grid-template-columns: 1fr; }
   .bridge li { grid-template-columns: 1fr; gap: 2px; }
+  .about__card { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 24px; }
+  .about__photo { margin: 0 auto; }
+  .about__bio { margin-inline: auto; }
 }
 @media (max-width: 560px) {
   .pillars, .profiles { grid-template-columns: 1fr; }
