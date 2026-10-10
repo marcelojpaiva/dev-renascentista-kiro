@@ -125,6 +125,34 @@ function setupNav() {
   );
 }
 
+/* ---------- Alternador de tema (claro/escuro) ----------
+   O tema inicial já é aplicado por um script inline no <head>
+   (evita flash de tema errado). Aqui só sincronizamos o botão
+   e tratamos o clique, salvando a escolha em localStorage. */
+function setupThemeToggle() {
+  const btn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  if (!btn) return;
+
+  const sync = (theme) => {
+    btn.setAttribute('aria-pressed', String(theme === 'dark'));
+    btn.setAttribute(
+      'aria-label',
+      theme === 'dark' ? 'Ativar tema claro' : 'Ativar tema escuro'
+    );
+  };
+
+  // Estado atual (definido pelo script do <head>); fallback para light.
+  sync(root.getAttribute('data-theme') || 'light');
+
+  btn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) { /* ignora */ }
+    sync(next);
+  });
+}
+
 /* ---------- Reveal on scroll ---------- */
 function setupReveal() {
   const items = document.querySelectorAll('.reveal');
@@ -170,6 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderRisks();
   renderAnswers();
   setupNav();
+  setupThemeToggle();
   setupReveal();
   setupQrCodes();
 });
