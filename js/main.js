@@ -146,15 +146,19 @@ function setupReveal() {
 /* ---------- QR Code do brinde ----------
    Usa um serviço público de geração de QR. Para o palco,
    gere e salve o PNG em assets/qr-brinde.png e troque o src. */
-function setupGiftQr() {
-  const img = document.getElementById('giftQr');
+function makeQr(imgId, link, fallbackText) {
+  const img = document.getElementById(imgId);
   if (!img) return;
-  const link = 'https://s12d.com/kiroemsalvador';
   img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=0&data=' + encodeURIComponent(link);
   img.onerror = () => {
     // fallback: mostra o link em texto caso o gerador esteja offline
-    img.replaceWith(el('<p style="font-weight:700;color:#9c5a2e">s12d.com/kiroemsalvador</p>'));
+    img.replaceWith(el('<p style="font-weight:700;color:#9c5a2e">' + fallbackText + '</p>'));
   };
+}
+
+function setupQrCodes() {
+  makeQr('giftQr', 'https://s12d.com/kiroemsalvador', 's12d.com/kiroemsalvador');
+  makeQr('communityQr', 'https://chat.whatsapp.com/GMh1xszpjoj71jPpuRHFx7?s=sh&p=a&mlu=4&ilr=4', 'Entre no grupo do WhatsApp');
 }
 
 /* ---------- Init ---------- */
@@ -167,5 +171,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderAnswers();
   setupNav();
   setupReveal();
-  setupGiftQr();
+  setupQrCodes();
 });
